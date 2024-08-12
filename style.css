@@ -6,11 +6,13 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 /* Body Background */
 body {
     background: white;
+
 }
 
 /* ---------------------- Company Logo Styles ---------------------- */
@@ -45,8 +47,30 @@ nav ul li {
 
 /* Styling the text in the dropdown menu */
 nav ul li a {
+    position: relative;
     color: white;
     text-decoration: none;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #ffcc00;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
 }
 
 /* ---------------------- Hero Section ---------------------- */
@@ -62,6 +86,74 @@ nav ul li a {
     color: #525252;
     box-shadow: 5px 1px 8px rgba(0, 0, 0, 0.14);
     overflow: hidden; /* This ensures any overflow content is hidden */
+}
+.loi{
+    position: relative;
+    width: 100%;
+    /* background: #eceaff; */
+    background: linear-gradient(135deg, #eae3fd, #ffffff);
+    color: #525252;
+    box-shadow: 5px 1px 8px rgba(0, 0, 0, 0.14);
+    overflow: hidden;
+
+}
+
+/* Styling the nav bar */
+.loi nav{
+
+    background: #1a1a1a;
+    width: 100%;
+    padding: 2px 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 100;
+}
+
+.contact{
+    position: relative;
+    width: 100%;
+    /* background: #eceaff; */
+    background: linear-gradient(135deg, #fde3f6, #ffffff);
+    color: #525252;
+    box-shadow: 5px 1px 8px rgba(0, 0, 0, 0.14);
+    overflow: hidden;
+
+}
+
+/* Styling the nav bar */
+.contact nav{
+
+    background: #1a1a1a;
+    width: 100%;
+    padding: 2px 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.si{
+
+    width: 100%;
+    background: linear-gradient(135deg, #e4fde3, #ffffff);
+    color: #525252;
+    box-shadow: 5px 1px 8px rgba(0, 0, 0, 0.14);
+
+}
+
+/* Styling the nav bar */
+.si nav{
+
+    background: #1a1a1a;
+    width: 100%;
+    padding: 2px 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index:1000;
 }
 
 /* Ensures the background image covers the hero section */
@@ -90,7 +182,7 @@ nav ul li a {
 }
 
 /* Positions the p element absolutely below the h1 element */
-.hero p {
+.slogan {
     position: absolute;
     top: 65%; /* Adjust position slightly lower */
     left: 50%;
@@ -103,6 +195,10 @@ nav ul li a {
     border-radius: 5px; /* Round the corners */
     z-index: 1;
 }
+
+
+
+
 /* ---------------------- Sign-in and Login ---------------------- */
 
 /* Sign-in feature */
@@ -137,6 +233,7 @@ nav ul li a {
 
 /*-- creating and styling starter application form -- daren 8/10   */
 .applicationForm {
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -148,6 +245,7 @@ nav ul li a {
     width: 1000px;
     border-radius: 10px;
     margin-left: 250px;
+    background-color: white;
 }
 
 .applicationForm form {
@@ -178,6 +276,11 @@ nav ul li a {
     align-items: center;
     height: 900px;
 }
+.entirecontact {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
 
 /* Centering the sign-in section */
 .everythingsign {
@@ -186,6 +289,21 @@ nav ul li a {
     align-items: center;
     height: 900px;
 }
+
+.contactus {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: large;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 5px 1px 8px rgba(0, 0, 0, 0.14);
+    max-width: 600px;
+    text-align: center;
+}
+
 
 /* ---------------------- About Section Dropdown ---------------------- */
 
@@ -211,6 +329,7 @@ nav ul li:hover .about-menu-wrap {
     background: white;
     padding: 20px;
     margin: 20px 0;
+    border-radius: 20px;
     z-index: 1000;
 }
 
@@ -293,6 +412,7 @@ nav ul li:hover .restaurant-menu-wrap {
     background: white;
     padding: 20px;
     margin: 20px 0;
+    border-radius: 20px;
     z-index: 1000;
 }
 
@@ -365,6 +485,12 @@ nav ul li:hover .restaurant-menu-wrap {
 /* Styling the background of the profile imgs */
 .profile-img {
     background-color: lightgray;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid white;
 }
 
 #aboutPage .about-content h1 {
@@ -419,15 +545,6 @@ nav ul li:hover .restaurant-menu-wrap {
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
 }
 
-#aboutPage .founder-card img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 15px;
-    border: 3px solid white;
-}
-
 #aboutPage .founder-card p {
     font-size: 18px;
     color: black;
@@ -440,5 +557,141 @@ nav ul li:hover .restaurant-menu-wrap {
     color: #ff7043;
 }
 
+/*  */
+/*  */
+/*  */
+#contactPage {
+    text-decoration: none;
+}
+
+/* Styling the background of the profile imgs */
+.profile-img {
+    background-color: lightgray;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid white;
+}
+
+#contactPage .contact-section {
+    margin-top: 50px;
+    text-align: center;
+}
+
+#contactPage .contact-section h2 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+#contactPage .contact-grid1 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+    
+}
+#contactPage .contact-grid2 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+#contactPage .contact-text {
+    color: rgb(70, 70, 172);
+}
+
+#contactPage .contact-card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    min-width: 700px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contactPage .contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+#contactPage .contact-card p {
+    font-weight: bolder;
+    font-size: 30px;
+    color: black;
+    margin-top: 12px;
+    font-weight: 300;
+}
+
+/* When you hover over the profile containers, the names change to that color */
+#contactPage .contact-card:hover p {
+    color: #ff7043;
+}
+
+/*  */
+/*  */
+/*  */
+
 
 /* ---------------------- END ABOUT PAGE ---------------------- */
+
+/* ---------------------- MISSION PAGE STYLING ---------------------- */
+#mission-page {
+    background: linear-gradient(135deg, #e3f2fd, #ffffff);
+    padding: 60px 20px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    margin-top: 40px;
+    display: flex;
+    align-items: center; /* Vertically centers the content */
+    padding: 20px; /* Add some padding for spacing */
+}
+
+.mission-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#mission-img {
+    height: 300px;
+    width: auto;
+    width: 40%; /* Adjusts the width to fit your design */
+    margin-right: 20px; /* Adds space between the image and the text */
+    margin-top: 200px;
+}
+
+.mission-items {
+    max-width: 50%; /* Ensures the text doesn't exceed 50% of the section */
+}
+
+.mission-items h1 {
+    font-size: 42px;
+    padding-left: 250px;
+    color: #0d47a1;
+    font-weight: 900;
+}
+
+.mission-items p {
+    font-size: 20px;
+    line-height: 1.8;
+    margin-top: 22px;
+    color: black;
+    font-weight: 300;
+}
+
+/* Add a zoom-in effect on images when hovering.*/
+.founder-card img {
+    transition: transform 0.3s ease;
+}
+
+.founder-card:hover img {
+    transform: scale(1.1);
+}

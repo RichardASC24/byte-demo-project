@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Finder</title>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <script src="data.js" defer></script>
+</head>
+<body>
+
+    <!-- Your HTML content like filter menu, restaurant menu, etc. -->
+    <div id="filterMenu">
+        <select id="locationFilter">
+            <option value="">Select Location</option>
+            <option value="Bronx">Bronx</option>
+            <option value="Queens">Queens</option>
+            <option value="Brooklyn">Brooklyn</option>
+            <option value="Manhattan">Manhattan</option>
+        </select>
+
+        <select id="foodTypeFilter">
+            <option value="">Select Food Type</option>
+            <option value="Meats">Meats</option>
+            <option value="Tacos">Tacos</option>
+            <option value="Noodles">Noodles</option>
+            <option value="Pizza">Pizza</option>
+            <option value="Fish">Fish</option>
+            <option value="Burgers">Burgers</option>
+        </select>
+
+        <select id="veganFilter">
+            <option value="">Vegan Friendly?</option>
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select>
+
+        <button onclick="applyFilters()">Apply Filters</button>
+    </div>
+
+    <div id="restaurantMenu">
+        <!-- Filtered restaurant results will be displayed here -->
+    </div>
+
+    <!-- Link to your JavaScript file -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
