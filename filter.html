@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Filter</title>
+    <link rel="stylesheet" href="filterstyle.css">
+    <script src="filter.js" defer></script>
+</head> 
+<body>
+    <div class="hero">
+        <header class="header">
+        <nav class="navbar">
+            <img src="images/demo-logo.png" class="company-logo">
+                <ul>
+                    <li><a href="index.html">Home</a>
+                        
+                        <div class="about-menu-wrap" id="aboutMenu">
+                            <div class="about-menu">
+                                <hr>
+                                <a href="index.html#aboutPage" class="about-menu-link">
+                                <p>Founders</p> 
+                                <span>></span>               
+                                </a>
+                                <a href="background.html" class="about-menu-link">
+                                    <p>Background</p> 
+                                    <span>></span>               
+                                    </a>
+                                <a href="index.html#mission-page" class="about-menu-link">
+                                    <p>Mission</p> 
+                                    <span>></span>               
+                                    </a>
+                                <a href="faq.html" class="about-menu-link">
+                                    <p>FAQ</p> 
+                                    <span>></span>               
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="partners.html">Partners</a></li>
+                    <li><a href="filter.html">Search Restaurants</a>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="login.html" class="login">Log In</a></li>
+                    <li><a href="signin.html">Sign In</a></li>
+                   
+                </ul>
+                
+            
+        </nav>
+        </header>
+        
+        
+    </div>
+        <!--  -->
+        <!--  -->
+        <div class="restaurantDrop">
+            <div class="container">
+                <div class="filters">
+                    <div class="filter-group">
+                        <label for="borough">Borough:</label>
+                        <select id="borough">
+                            <option value="">All</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="ethnicity">Ethnicity:</label>
+                        <select id="ethnicity">
+                            <option value="">All</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="glutenFree">Gluten Free:</label>
+                        <select id="glutenFree">
+                            <option value="">All</option>
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="vegan">Vegan:</label>
+                        <select id="vegan">
+                            <option value="">All</option>
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="halal">Halal:</label>
+                        <select id="halal">
+                            <option value="">All</option>
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </div>
+                    <!--  -->
+                    <div class="filter-group">
+                        <label for="petFriendly">Pet Friendly:</label>
+                        <select id="petFriendly">
+                            <option value="">All</option>
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </div>
+                    <!--  -->
+                    <div class="filter-group">
+                        <label for="nutAllergy">Nut Allergy:</label>
+                        <select id="nutAllergy">
+                            <option value="">All</option>
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="shellfishAllergy">Shellfish Allergy:</label>
+                        <select id="shellfishAllergy">
+                            <option value="">All</option>
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </div>
+    
+                    <!--  -->
+                    <div class="filter-group">
+                        <label for="lactoseIntolerant">Lactose Intolerant:</label>
+                        <select id="lactoseIntolerant">
+                            <option value="">All</option>
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="pescatarian">Pescatarian:</label>
+                        <select id="pescatarian">
+                            <option value="">All</option>
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="vegetarian">Vegetarian:</label>
+                        <select id="vegetarian">
+                            <option value="">All</option>
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="restaurantType">Restaurant Type:</label>
+                        <select id="restaurantType">
+                            <option value="">All</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <button id="clear-filters-btn">Clear Filters</button>
+                    </div>
+                </div>
+                <div id="results"></div>
+            </div>
+        </div>
+    </div>
+    <button id="back-to-top">Back to Top</button>
+<footer class="footer"><p>&copy; 2024 ByteWave. All rights reserved.</p></footer>
+</body>
+</html>

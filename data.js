@@ -1,3 +1,31 @@
+/*
+let places = [
+{               "name": "Halalbee's",
+                "address": "1957 Westchester Ave, Bronx, NY 10462",
+                "glutenFree": true,
+                "vegan": false,
+                "petFriendly": true,
+                "halal": true,
+                "reviews": "3.7",
+                "price-range": "$8-$15",
+                "ethnicity": "Middle Eastern",
+                "foodType": "Meats",
+                "borough": "Bronx"
+},
+{               "name": "Halalbee's",
+                "address": "1957 Westchester Ave, Bronx, NY 10462",
+                "glutenFree": true,
+                "vegan": false,
+                "petFriendly": true,
+                "halal": true,
+                "reviews": "3.7",
+                "price-range": "$8-$15",
+                "ethnicity": "Middle Eastern",
+                "foodType": "Meats",
+                "borough": "Bronx"
+},
+]
+*/
 let places = {
     "restaurants": {
         "Bronx": [
@@ -15,6 +43,7 @@ let places = {
                 },
                 "ethnicity": "Middle Eastern",
                 "foodType": "Meats"
+
             },
             {
                 "name": "King Grill",
