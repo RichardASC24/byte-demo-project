@@ -328,7 +328,7 @@ nav ul li a:hover::after {
     height: 900px;
 }
 .entirecontact {
-
+    margin-top: 100px;
     display: flex;
     justify-content: center;
     align-items: start;
