@@ -8,6 +8,7 @@ let clientSubmitButton = document.getElementById("Clientbtn").querySelector("inp
 let customerOrderDetails = document.getElementById("CustomerOrderDetails");
 let partnerSubmitButton = document.getElementById("Partnerbtn").querySelector("input");
 let clientOrderText = document.getElementById("OrderInside");
+let bellsfx = document.getElementById("bellsfx");
 
 function RandomOrderNumber() {
     return Math.floor(100 + Math.random() * 900);
@@ -24,7 +25,8 @@ function handleClientSubmit(event) {
 
 function handlePartnerSubmit() {
     clientLight.style.backgroundColor = "green";
-   
+    bellsfx.play();
+    
 }
 
 clientSubmitButton.addEventListener("click", handleClientSubmit);
